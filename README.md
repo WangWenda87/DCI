@@ -1,16 +1,16 @@
 # DCI
 
 #### Description
-DCI-score, a new evaluation strategy for protein complex which only bases on distance map and CI (contact-interface) map, it can give a global assessment for complex structure, DCI-score ranges from 0 to 1, the value is higher when the two structures are more similar.
+$\qquad$DCI-score, a new evaluation strategy for protein complex which only bases on distance map and CI (contact-interface) map, it can give a global assessment for complex structure, DCI-score ranges from 0 to 1, the value is higher when the two structures are more similar.
 
 #### Software Architecture
-The code is located in two folders, in which the shell scripts in the "scripts" folder is used for the pre-processing of the initial input files and the integration of the calculation results, python scripts in the "DCI" folder are used for the calculation of the DCI-score. In addition, two pairs of complex structures are stored in "examples" to test the operation of the program.
+$\qquad$The code is located in two folders, in which the shell scripts in the "scripts" folder is used for the pre-processing of the initial input files and the integration of the calculation results, python scripts in the "DCI" folder are used for the calculation of the DCI-score. In addition, two pairs of complex structures are stored in "examples" to test the operation of the program.
 
 #### Installation
 
 1.  clone & install  
 $\qquad\qquad$git clone https://gitee.com/WendaWang/DCI-score.git  
-To install the Python packages used in this program, please run:  
+to install the Python packages used in this program, please run:  
 $\qquad\qquad$pip install -r py-scripts/requirements.txt  
 2.  run  
 The common format for running the program is:  
