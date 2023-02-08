@@ -9,9 +9,9 @@ The code is located in two folders, in which the shell scripts in the "scripts" 
 #### Installation
 
 1.  clone & install  
-git clone https://gitee.com/WendaWang/DCI-score.git  
+$\qquad\qquad$git clone https://gitee.com/WendaWang/DCI-score.git  
 To install the Python packages used in this program, please run:  
-        pip install -r py-scripts/requirements.txt  
+$\qquad\qquad$pip install -r py-scripts/requirements.txt  
 2.  run  
 The common format for running the program is:  
 	bash scripts/run.sh <gt> <model> -model_chain_order <model_chain_order>  
