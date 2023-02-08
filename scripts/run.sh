@@ -11,8 +11,8 @@ then
 fi
 mv gt.pdb gt_${gt_name}.pdb
 mv predict.pdb pred_${pred_name}.pdb
-./py-scripts/main.py gt_${gt_name}.pdb pred_${pred_name}.pdb > result.txt
-./py-scripts/create_chains_info.py gt_${gt_name}.pdb pred_${pred_name}.pdb > DCI_result.txt
+./DCI/main.py gt_${gt_name}.pdb pred_${pred_name}.pdb > result.txt
+./DCI/create_chains_info.py gt_${gt_name}.pdb pred_${pred_name}.pdb > DCI_result.txt
 
 penalty=$(awk -F',' '{print $2}' penalty.csv)
 echo "penalty of structure-loss : $penalty" >> DCI_result.txt
