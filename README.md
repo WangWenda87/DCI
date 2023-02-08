@@ -9,19 +9,19 @@ $\qquad$The code is located in two folders, in which the shell scripts in the "s
 #### Installation
 
 1.  clone & install  
-$\qquad\qquad$git clone https://gitee.com/WendaWang/DCI-score.git  
+&emsp;&emsp;&emsp;&emsp;git clone https://gitee.com/WendaWang/DCI-score.git  
 to install the Python packages used in this program, please run:  
-$\qquad\qquad$pip install -r py-scripts/requirements.txt  
+&emsp;&emsp;&emsp;&emsp;pip install -r DCI/requirements.txt  
 2.  run  
-The common format for running the program is:  
-$\qquad\qquad$bash scripts/run.sh <gt> <model> -model_chain_order <model_chain_order>  
-$\qquad$ where <gt> is the pdb file of ground truth (refer structure), <model> is the pdb file of predicted model, and <model_chain_order> is the correct order of predicted model chain based on ground truth.   
+The common format for running the program is: 
+&emsp;&emsp;&emsp;&emsp;bash scripts/run.sh <gt> <model> -model_chain_order <model_chain_order>  
+&emsp;&emsp;where <gt> is the pdb file of ground truth (refer structure), <model> is the pdb file of predicted model, and <model_chain_order> is the correct order of predicted model chain based on ground truth.   
     For example complex 7AC9 in "examples" folder, the order of the three chains in ground truth is "H L I", which should correspond to "D B C" in predicted model, respectively, while the 7AC9_finetune.pdb file is in the order "B C D", so the parameter <model_chain_order> should be "DBC". You can test 7AC9 by running:  
-$\qquad\qquad$bash scripts/run.sh examples/7AC9.pdb examples/7AC9_finetune.pdb -model_chain_order DBC  
-$\qquad$if the chains' order of ground truth and predicted model is already correct (like 2VDU in "examples" folder), then the <-model_chian_order> parameter is not required, just run:  
-$\qquad\qquad$bash scripts/run.sh <gt> <model>  
+&emsp;&emsp;&emsp;&emsp;bash scripts/run.sh examples/7AC9.pdb examples/7AC9_finetune.pdb -model_chain_order DBC  
+&emsp;&emsp;if the chains' order of ground truth and predicted model is already correct (like 2VDU in "examples" folder), then the <-model_chian_order> parameter is not required, just run:  
+&emsp;&emsp;&emsp;&emsp;bash scripts/run.sh <gt> <model>  
 3.  result  
-$\qquad$You will get a txt file with evaluation results. The Result file first shows some basic structure information such as the names of the two structures, the length of the ground truth (refer structure), the equivalent length of each chain. And then, it includes the three constituent subunits of DCI-score: inter-Fnat, intra-Fnat and difference value. Finally, in terms of the DCI-score results, we provide the results of the two calculation strategies in the result file. If you need to consider the loss of ground truth’s length due to the incomplete predicted structure, please choose the DCI(penalty) in the result file, otherwise, please choose the DCI(no penalty). The specific penalty value is shown at “penalty of structure-loss” in the result file.  
+&emsp;&emsp;You will get a txt file with evaluation results. The Result file first shows some basic structure information such as the names of the two structures, the length of the ground truth (refer structure), the equivalent length of each chain. And then, it includes the three constituent subunits of DCI-score: inter-Fnat, intra-Fnat and difference value. Finally, in terms of the DCI-score results, we provide the results of the two calculation strategies in the result file. If you need to consider the loss of ground truth’s length due to the incomplete predicted structure, please choose the DCI(penalty) in the result file, otherwise, please choose the DCI(no penalty). The specific penalty value is shown at “penalty of structure-loss” in the result file.  
 #### Contribution
 
 1.  Fork the repository
