@@ -14,7 +14,7 @@ to install the Python packages used in this program, please run:
 &emsp;&emsp;&emsp;&emsp;pip install -r DCI/requirements.txt  
 and please make sure "emboss" is installed on your local site.
 2.  run  
-The common format for running the program is: 
+The common format for running the program is:   
 &emsp;&emsp;&emsp;&emsp;bash scripts/run.sh <gt> <model> -model_chain_order <model_chain_order>  
 &emsp;&emsp;where <gt> is the pdb file of ground truth (refer structure), <model> is the pdb file of predicted model, and <model_chain_order> is the correct order of predicted model chain based on ground truth.   
     For example complex 7AC9 in "examples" folder, the order of the three chains in ground truth is "H L I", which should correspond to "D B C" in predicted model, respectively, while the 7AC9_finetune.pdb file is in the order "B C D", so the parameter <model_chain_order> should be "DBC". You can test 7AC9 by running:  
