@@ -23,18 +23,9 @@ The common format for running the program is:
 &emsp;&emsp;&emsp;&emsp;bash scripts/run.sh <gt> <model>  
 3.  result  
 &emsp;&emsp;You will get a txt file with evaluation results. The Result file first shows some basic structure information such as the names of the two structures, the length of the ground truth (refer structure), the equivalent length of each chain. And then, it includes the three constituent subunits of DCI-score: inter-Fnat, intra-Fnat and difference value. Finally, in terms of the DCI-score results, we provide the results of the two calculation strategies in the result file. If you need to consider the loss of ground truth’s length due to the incomplete predicted structure, please choose the DCI(penalty) in the result file, otherwise, please choose the DCI(no penalty). The specific penalty value is shown at “penalty of structure-loss” in the result file.  
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
 #### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
+2.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
+3.  The most valuable open source project [GVP](https://gitee.com/gvp)
+4.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
+5.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
