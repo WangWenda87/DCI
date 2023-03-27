@@ -4,15 +4,15 @@ gt_name=$(echo $1 | rev | cut -d'/' -f1 | rev | cut -d'.' -f1)
 pred_name=$(echo $2 | rev | cut -d'/' -f1 | rev | cut -d'.' -f1)
 if [[ $# -eq 2 ]]
 then
-        ./scripts/data.sh $1 $2
+        bash ./scripts/data.sh $1 $2
 elif [[ $3=="-model_chain_order" ]] && [[ $# -eq 4 ]]
 then
-        ./scripts/data.sh $1 $2 $3 $4
+        bash ./scripts/data.sh $1 $2 $3 $4
 fi
 mv gt.pdb gt_${gt_name}.pdb
 mv predict.pdb pred_${pred_name}.pdb
-./DCI/main.py gt_${gt_name}.pdb pred_${pred_name}.pdb > result.txt
-./DCI/create_chains_info.py gt_${gt_name}.pdb pred_${pred_name}.pdb > DCI_result.txt
+python ./DCI/main.py gt_${gt_name}.pdb pred_${pred_name}.pdb > result.txt
+python ./DCI/create_chains_info.py gt_${gt_name}.pdb pred_${pred_name}.pdb > DCI_result.txt
 
 penalty=$(awk -F',' '{print $2}' penalty.csv)
 echo "penalty of structure-loss : $penalty" >> DCI_result.txt
